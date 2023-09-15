@@ -19,13 +19,18 @@ export default function Home({ orderedContent }) {
         switch (contentItem.sys.contentType.sys.id) {
           case "hero":
             return (
-              <Hero content={contentItem.fields} sectionRef={sectionRef} />
+              <Hero
+                content={contentItem.fields}
+                sectionRef={sectionRef}
+                key={contentItem.sys.id}
+              />
             );
           case "infoSection":
             return (
               <Section
                 content={contentItem.fields}
                 refer={idx === 1 ? sectionRef : null}
+                key={contentItem.sys.id}
               />
             );
           case "banner":
@@ -33,12 +38,20 @@ export default function Home({ orderedContent }) {
               <Banner
                 content={contentItem.fields}
                 refer={idx === 1 ? sectionRef : null}
+                key={contentItem.sys.id}
               />
             );
           case "reviewSection":
-            return <ReviewsSection content={contentItem.fields} />;
+            return (
+              <ReviewsSection
+                content={contentItem.fields}
+                key={contentItem.sys.id}
+              />
+            );
           case "footer":
-            return <Footer content={contentItem.fields} />;
+            return (
+              <Footer content={contentItem.fields} key={contentItem.sys.id} />
+            );
           default:
             return null;
         }

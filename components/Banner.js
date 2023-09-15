@@ -1,5 +1,4 @@
 import { Button } from "./Button";
-import { forwardRef } from "react";
 
 export function Banner({ content, refer }) {
   // Determine the alignment class based on the prop

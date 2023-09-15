@@ -10,7 +10,7 @@ export function Footer({ content }) {
             <img
               src={`https:${icon.fields.logo.fields.file.url}`}
               alt='logo'
-              className='w-10 h-10'
+              className='w-10 h-10 mr-2'
             />
           ))}
         </div>

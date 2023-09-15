@@ -28,7 +28,6 @@ const reviews = [
 export function ReviewsSection({ content }) {
   const [activeReviewIndex, setActiveReviewIndex] = useState(0);
   const [slideDirection, setSlideDirection] = useState(null);
-  console.log("THIS IS REVIEW CONTENT", content);
 
   const nextReview = () => {
     setSlideDirection("right");
