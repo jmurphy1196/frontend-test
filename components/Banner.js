@@ -56,7 +56,7 @@ export function Banner({ content, refer }) {
           )}
           <Button
             className={
-              "bg-orange-500 mt-4 border-orange-500 border-2 hover:bg-white hover:text-orange-500 transition-colors"
+              "bg-orange-500 mt-4 border-orange-500 border-2 text-white hover:bg-white hover:text-orange-500 transition-colors"
             }
           >
             {content.ctaButtonText}
